@@ -10,18 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="70dp">
 
-        <TextView
-            android:layout_width="27dp"
-            android:layout_height="50dp"
-            android:text="00"
-            android:textSize="20dp"
-            android:layout_marginLeft="5dp"/>
-
-        <TextView
+        <Button
+            android:id="@+id/button"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="/10"
-            android:textSize="20dp"/>
+            android:background="#00FF0000"
+            android:drawableBottom="@drawable/size" />
 
         <TextView
             android:id="@+id/textView14"
@@ -31,7 +25,20 @@
             android:textColor="#000000"
             android:textSize="34dp"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="60dp"/>
+            android:layout_marginLeft="100dp"/>
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="50dp"
+            android:text="00"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="/10"
+            android:textSize="20dp"/>
 
     </LinearLayout>
     <View
