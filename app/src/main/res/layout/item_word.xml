@@ -11,7 +11,7 @@
         android:layout_height="90dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/backBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
@@ -24,7 +24,7 @@
             android:layout_width="134dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
-            android:text="단어 학습"
+            android:text="단어 목록"
             android:textSize="33dp"
             android:layout_marginLeft="70dp" />
     </LinearLayout>
@@ -39,57 +39,57 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/wordBtn1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button1"
+                android:text="가축"
                 android:height="90dp"
                 android:layout_margin="10dp"/>
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/wordBtn2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button2"
-                android:height="90dp"
-                android:layout_margin="10dp"/>
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button3"
+                android:text="나물"
                 android:height="90dp"
                 android:layout_margin="10dp"/>
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/wordBtn3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button4"
+                android:text="다람쥐"
                 android:height="90dp"
                 android:layout_margin="10dp"/>
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/wordBtn4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button5"
+                android:text="라일락"
                 android:height="90dp"
                 android:layout_margin="10dp"/>
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/wordBtn5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button6"
+                android:text="마찰"
                 android:height="90dp"
                 android:layout_margin="10dp"/>
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/wordBtn6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button8번"
+                android:text="바가지"
+                android:height="90dp"
+                android:layout_margin="10dp"/>
+
+            <Button
+                android:id="@+id/wordBtn7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="사면"
                 android:height="90dp"
                 android:layout_margin="10dp"/>
 

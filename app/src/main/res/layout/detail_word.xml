@@ -11,7 +11,7 @@
         android:layout_height="90dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/backBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="#00FF0000"
@@ -58,7 +58,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="rrrrrrrrrrrrrrrrrrrrrrrrrrrffdadfdfadsfasdfasdfdfadfdsadsafasdfasddfadfrrrrrrrrrrrrrrrrfㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ"
+                android:text="rrr"
                 android:textSize="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
@@ -66,7 +66,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/Btn"
         android:layout_width="260dp"
         android:layout_height="70dp"
         android:text="연습하기"

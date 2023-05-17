@@ -20,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WordPage" />
+        <activity android:name=".WordDetailPage" />
+        <activity android:name=".STTPage" />
+        <activity android:name=".TestPage" />
     </application>
 
 </manifest>
