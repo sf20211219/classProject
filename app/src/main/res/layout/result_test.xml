@@ -13,7 +13,7 @@
         android:layout_height="90dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/backBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="#00FF0000"

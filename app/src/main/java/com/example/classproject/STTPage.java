@@ -9,13 +9,13 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class STTPage extends AppCompatActivity implements View.OnClickListener{
-    Button backBtn, sttBtn;
+    private Button backBtn, sttBtn;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_word_detail);
+        setContentView(R.layout.practice_word);
 
         backBtn = (Button) findViewById(R.id.backBtn);
         sttBtn = (Button) findViewById(R.id.sttBtn);
