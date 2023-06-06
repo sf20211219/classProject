@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity {
     private Button btn1, btn2;
 
     @SuppressLint("MissingInflatedId")
@@ -20,20 +20,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
 
-        btn1.setOnClickListener(this);
-        btn2.setOnClickListener(this);
+        btn1.setOnClickListener(click);
+        btn2.setOnClickListener(click);
     }
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn1:
-                Intent intent1 = new Intent(getApplicationContext(), WordListActivity.class);
-                startActivity(intent1);
-                break;
-            case R.id.btn2:
-                Intent intent2 = new Intent(getApplicationContext(), TestActivity.class);
-                startActivity(intent2);
-                break;
+
+    View.OnClickListener click = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.btn1:
+                    Intent intent1 = new Intent(MainActivity.this, WordListActivity.class);
+                    startActivity(intent1);
+                    break;
+                case R.id.btn2:
+                    Intent intent2 = new Intent(MainActivity.this, TestActivity.class);
+                    startActivity(intent2);
+                    break;
+            }
         }
-    }
+    };
 }

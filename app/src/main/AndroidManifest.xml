@@ -19,7 +19,7 @@
             android:name="com.example.service.RecordService"
             android:exported="false"></service>
         <activity
-            android:name=".WordPractice"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,7 @@
         </activity>
         <activity android:name=".WordListActivity" />
         <activity android:name=".WordDetail" />
-
+        <activity android:name=".WordPractice"/>
         <activity android:name=".TestActivity" />
         <activity android:name=".TestResult" />
     </application>
