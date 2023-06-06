@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -11,8 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassProject"
         tools:targetApi="31">
+        <service
+            android:name="com.example.service.RecordService"
+            android:exported="false"></service>
         <activity
-            android:name=".MainActivity"
+            android:name=".WordPractice"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +27,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WordPage" />
-        <activity android:name=".WordDetailPage" />
-        <activity android:name=".STTPage" />
-        <activity android:name=".TestPage" />
+        <activity android:name=".WordListActivity" />
+        <activity android:name=".WordDetail" />
+
+        <activity android:name=".TestActivity" />
+        <activity android:name=".TestResult" />
     </application>
 
 </manifest>

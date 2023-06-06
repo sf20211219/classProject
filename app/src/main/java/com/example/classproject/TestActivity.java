@@ -1,6 +1,5 @@
 package com.example.classproject;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,32 +7,28 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class WordDetailPage extends AppCompatActivity implements View.OnClickListener{
-    private Button backBtn, Btn;
-
-    @SuppressLint("MissingInflatedId")
+public class TestActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button backBtn, testBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.detail_word);
+        setContentView(R.layout.activity_test);
 
         backBtn = (Button) findViewById(R.id.backBtn);
-        Btn = (Button) findViewById(R.id.Btn);
+        testBtn = (Button) findViewById(R.id.testBtn);
 
         backBtn.setOnClickListener(this);
-        Btn.setOnClickListener(this);
+        testBtn.setOnClickListener(this);
     }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.backBtn:
-                Intent intent1 = new Intent(getApplicationContext(), WordPage.class);
+                Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent1);
                 break;
-            case R.id.Btn:
-                Intent intent2 = new Intent(getApplicationContext(), STTPage.class);
-                startActivity(intent2);
+            case R.id.testBtn:
+                //음성인식
                 break;
         }
     }
