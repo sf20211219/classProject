@@ -33,7 +33,7 @@ public class RecordService extends Service {
         RecognitionListener listener = new RecognitionListener() {
             @Override
             public void onReadyForSpeech(Bundle bundle) {
-                Log.d(TAG, "시도");
+
             }
 
             @Override
@@ -58,12 +58,11 @@ public class RecordService extends Service {
 
             @Override
             public void onError(int i) {
-                Log.d(TAG, "실패");
+
             }
 
             @Override
             public void onResults(Bundle bundle) {
-                Log.d(TAG, "반환중");
                 ArrayList<String> resultList = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
                 sttResult = resultList;
             }
@@ -82,9 +81,4 @@ public class RecordService extends Service {
         speechRecognizer.setRecognitionListener(listener);
         return sttResult;
     }
-//    private void setResult(String result) {
-//        Log.d(TAG, "값 바꾸는 중");
-//        sttResult = result;
-//    }
-
 }
