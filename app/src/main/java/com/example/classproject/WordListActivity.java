@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class WordPage extends AppCompatActivity implements View.OnClickListener {
+public class WordListActivity extends AppCompatActivity implements View.OnClickListener {
     private Button wordBtn[] = new Button[7];
     private Integer[] btnId = {
             R.id.wordBtn1, R.id.wordBtn2, R.id.wordBtn3, R.id.wordBtn4,
@@ -16,7 +16,7 @@ public class WordPage extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_word);
+        setContentView(R.layout.list_word);
 
         for(int i = 0; i <= 7; i++) {
             wordBtn[i] = (Button) findViewById(btnId[i]);
