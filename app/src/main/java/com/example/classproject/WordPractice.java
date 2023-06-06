@@ -55,7 +55,6 @@ public class WordPractice extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "시작");
         Intent serviceIntent = new Intent(WordPractice.this, RecordService.class);
         bindService(serviceIntent, conn, Context.BIND_AUTO_CREATE);
     }
@@ -63,7 +62,6 @@ public class WordPractice extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "삭제");
         unbindService(conn);
         isBind = false;
     }
@@ -79,13 +77,11 @@ public class WordPractice extends AppCompatActivity {
                     break;
                 case R.id.recordBtn:
                     if (isBind) {
-                        Log.d(TAG, "되나?");
                         sttResult = service.getSttResult();
                     }
                     break;
             }
             if (sttResult != null) {
-                Log.d(TAG, "제발");
                 for(int i = 0; i < sttResult.size(); i++) {
                     sttText.setText(sttResult.get(i));
                 }
