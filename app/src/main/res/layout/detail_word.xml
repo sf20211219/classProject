@@ -19,14 +19,14 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/wordView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="단어"
             android:textColor="#000000"
             android:textSize="34dp"
             android:layout_marginTop="15dp"
-            android:layout_marginStart="130dp" />
+            android:layout_marginStart="120sp" />
     </LinearLayout>
 
     <View
@@ -37,7 +37,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="430dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -54,7 +54,8 @@
                     android:id="@+id/videoView"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp" />
+                    android:layout_margin="10dp"
+                    android:background="@color/white"/>
 
                 <Button
                     android:id="@+id/button3"
@@ -64,6 +65,7 @@
                     android:drawableBottom="@drawable/playsize"
                     android:layout_gravity="center"
                     tools:ignore="SpeakableTextPresentCheck" />
+
             </FrameLayout>
 
             <TextView
@@ -71,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="text"
-                android:textSize="50dp"
+                android:textSize="25dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp" />
         </LinearLayout>
@@ -79,11 +81,12 @@
 
     <Button
         android:id="@+id/Btn"
-        android:layout_width="260dp"
-        android:layout_height="70dp"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
         android:text="연습하기"
         android:layout_gravity="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round"/>
 </LinearLayout>

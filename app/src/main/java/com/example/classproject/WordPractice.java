@@ -31,10 +31,12 @@ public class WordPractice extends AppCompatActivity {
     private static final int PERMISSION = 1;
     private RecordService service;
     private Button backBtn, recordBtn;
-    private TextView sttText;
+    private TextView sttText, wData, tData;
     private boolean isBind = false;
     //private String
     private ArrayList<String> sttResult = null;
+
+    private int buttonId;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -44,9 +46,19 @@ public class WordPractice extends AppCompatActivity {
 
         checkPermission();
 
+        Intent intent = getIntent(); // Intent 객체를 먼저 가져옴
+        buttonId = intent.getIntExtra("buttonId", 0); // 전달받은 버튼 ID 저장
+
         backBtn = (Button) findViewById(R.id.backBtn);
         recordBtn = (Button) findViewById(R.id.recordBtn);
         sttText = (TextView) findViewById(R.id.sttText);
+        wData = (TextView) findViewById(R.id.wordView);
+        tData = (TextView) findViewById(R.id.voiceTextView);
+        String word = getIntent().getStringExtra("word");
+        String voice = getIntent().getStringExtra("voice");
+
+        wData.setText(word);
+        tData.setText(voice);
 
         backBtn.setOnClickListener(click);
         recordBtn.setOnClickListener(click);
@@ -66,13 +78,20 @@ public class WordPractice extends AppCompatActivity {
         isBind = false;
     }
 
-
     private View.OnClickListener click = new View.OnClickListener() {
+
         @Override
         public void onClick(View v) {
+            String word = getIntent().getStringExtra("word");
+            String detail = getIntent().getStringExtra("detail");
+            String voice = getIntent().getStringExtra("voice");
             switch (v.getId()) {
                 case R.id.backBtn:
                     Intent backIntent = new Intent(WordPractice.this, WordDetail.class);
+                    backIntent.putExtra("buttonId", buttonId);
+                    backIntent.putExtra("word", word);
+                    backIntent.putExtra("detail", detail);
+                    backIntent.putExtra("voice", voice);
                     startActivity(backIntent);
                     break;
                 case R.id.recordBtn:

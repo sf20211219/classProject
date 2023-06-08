@@ -52,6 +52,7 @@
                 android:height="90dp"
                 android:text="닦다"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -62,6 +63,7 @@
                 android:height="90dp"
                 android:text="넓다"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -72,6 +74,7 @@
                 android:height="90dp"
                 android:text="굳이"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -82,6 +85,7 @@
                 android:height="90dp"
                 android:text="국물"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -92,6 +96,7 @@
                 android:height="90dp"
                 android:text="물질"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -102,6 +107,7 @@
                 android:height="90dp"
                 android:text="아침밥"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -112,6 +118,7 @@
                 android:height="90dp"
                 android:text="대통령"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -122,6 +129,7 @@
                 android:height="90dp"
                 android:text="줄넘기"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -132,6 +140,7 @@
                 android:height="90dp"
                 android:text="솜이불"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
             <Button
@@ -142,6 +151,7 @@
                 android:height="90dp"
                 android:text="닭장"
                 android:textColor="@android:color/white"
+                android:background="@drawable/round"
                 android:textSize="20sp" />
 
         </LinearLayout>
