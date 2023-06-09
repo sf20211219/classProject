@@ -21,6 +21,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.example.service.RecordService;
 
@@ -62,7 +63,10 @@ public class WordPractice extends AppCompatActivity {
 
         backBtn.setOnClickListener(click);
         recordBtn.setOnClickListener(click);
+
+        LocalBroadcastManager.getInstance(this).registerReceiver(resultReceiver, new IntentFilter(RecordService.ACTION_RESULT));
     }
+
 
     @Override
     protected void onStart() {
@@ -70,6 +74,18 @@ public class WordPractice extends AppCompatActivity {
         Intent serviceIntent = new Intent(WordPractice.this, RecordService.class);
         bindService(serviceIntent, conn, Context.BIND_AUTO_CREATE);
     }
+
+    private BroadcastReceiver resultReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            ArrayList<String> resultList = intent.getStringArrayListExtra(RecordService.EXTRA_RESULT);
+            if (resultList != null) {
+                for (int i = 0; i < resultList.size(); i++) {
+                    sttText.setText(resultList.get(i));
+                }
+            }
+        }
+    };
 
     @Override
     protected void onStop() {
@@ -99,11 +115,6 @@ public class WordPractice extends AppCompatActivity {
                         sttResult = service.getSttResult();
                     }
                     break;
-            }
-            if (sttResult != null) {
-                for(int i = 0; i < sttResult.size(); i++) {
-                    sttText.setText(sttResult.get(i));
-                }
             }
         }
     };

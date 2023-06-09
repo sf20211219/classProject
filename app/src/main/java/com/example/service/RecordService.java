@@ -10,9 +10,13 @@ import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.util.Log;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import java.util.ArrayList;
 
 public class RecordService extends Service {
+    public static final String ACTION_RESULT = "com.example.classproject.ACTION_RESULT";
+    public static final String EXTRA_RESULT = "result";
     private static final String TAG = "Service";
     private final IBinder binder = new LocalBinder();
     private SpeechRecognizer speechRecognizer;
@@ -26,6 +30,12 @@ public class RecordService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         return binder;
+    }
+
+    private void sendResult(ArrayList<String> result) {
+        Intent intent = new Intent(ACTION_RESULT);
+        intent.putExtra(EXTRA_RESULT, result);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 
     public ArrayList<String> getSttResult() {
@@ -63,8 +73,9 @@ public class RecordService extends Service {
 
             @Override
             public void onResults(Bundle bundle) {
+                Log.d(TAG, "1");
                 ArrayList<String> resultList = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-                sttResult = resultList;
+                sendResult(resultList);
             }
 
             @Override

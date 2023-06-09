@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(click);
     }
 
-    View.OnClickListener click = new View.OnClickListener() {
+    private View.OnClickListener click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
