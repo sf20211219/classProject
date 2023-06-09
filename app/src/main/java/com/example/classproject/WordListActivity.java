@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class WordListActivity extends AppCompatActivity {
+public class WordListActivity extends AppCompatActivity implements View.OnClickListener {
     private Button[] wordBtn = new Button[10];
     private Button backBtn;
     private Integer[] btnId = {
@@ -34,29 +34,27 @@ public class WordListActivity extends AppCompatActivity {
         setContentView(R.layout.list_word);
 
         backBtn = findViewById(R.id.backBtn);
-        backBtn.setOnClickListener(click);
+        backBtn.setOnClickListener(this);
 
         for (int i = 0; i < wordBtn.length; i++) {
             wordBtn[i] = findViewById(btnId[i]);
-            wordBtn[i].setOnClickListener(click);
+            wordBtn[i].setOnClickListener(this);
         }
     }
 
-    private View.OnClickListener click = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            int buttonId = v.getId();
-            int index = Arrays.asList(btnId).indexOf(buttonId);
-            if (index != -1) {
-                String url = "http://192.168.64.2:3000/btn" + (index + 1);
-                String name = wordBtn[index].getText().toString();
-                handleButtonClick(url, name, buttonId);
-            } else if (buttonId == R.id.backBtn) {
-                Intent intent = new Intent(WordListActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
+    @Override
+    public void onClick(View v) {
+        int buttonId = v.getId();
+        int index = Arrays.asList(btnId).indexOf(buttonId);
+        if (index != -1) {
+            String url = "http://192.168.64.2:3000/btn" + (index + 1);
+            String name = wordBtn[index].getText().toString();
+            handleButtonClick(url, name, buttonId);
+        } else if (buttonId == R.id.backBtn) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
         }
-    };
+    }
 
     private void handleButtonClick(String url, String name, int buttonId) {
         new Thread(() -> {
@@ -73,20 +71,26 @@ public class WordListActivity extends AppCompatActivity {
                     final String responseData = response.body().string();
                     runOnUiThread(() -> {
                         try {
-                            JSONObject jsonObject = new JSONArray(responseData).getJSONObject(0);
-                            String word = jsonObject.getString("word");
-                            String voice = jsonObject.getString("voice");
-                            String detail = jsonObject.getString("detail");
-                            String pronunciation_url = jsonObject.getString("pronunciation_url");
+                            JSONObject jsonObject = new JSONObject(responseData);
 
-                            Intent intent = new Intent(WordListActivity.this, WordDetail.class);
-                            intent.putExtra("buttonId", buttonId);
-                            intent.putExtra("word", word);
-                            intent.putExtra("detail", detail);
-                            intent.putExtra("voice", voice);
-                            intent.putExtra("pronunciation_url", pronunciation_url);
-                            startActivity(intent);
-                            Log.d(TAG, pronunciation_url);
+                            // 필드 확인
+                            if (jsonObject.has("word") && jsonObject.has("voice") && jsonObject.has("detail") && jsonObject.has("pronunciation_url")) {
+                                String word = jsonObject.getString("word");
+                                String voice = jsonObject.getString("voice");
+                                String detail = jsonObject.getString("detail");
+                                String pronunciation_url = jsonObject.getString("pronunciation_url");
+
+                                Intent intent = new Intent(WordListActivity.this, WordDetail.class);
+                                intent.putExtra("buttonId", buttonId);
+                                intent.putExtra("word", word);
+                                intent.putExtra("detail", detail);
+                                intent.putExtra("voice", voice);
+                                intent.putExtra("pronunciation_url", pronunciation_url);
+                                startActivity(intent);
+                                Log.d(TAG, pronunciation_url);
+                            } else {
+                                Log.d(TAG, "JSON 응답에 필드가 누락되었습니다.");
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -99,4 +103,5 @@ public class WordListActivity extends AppCompatActivity {
             }
         }).start();
     }
+
 }
