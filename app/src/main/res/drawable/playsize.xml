@@ -3,5 +3,6 @@
     <item
         android:drawable="@drawable/play"
         android:width="30dp"
-        android:height="30dp"/>
+        android:height="30dp"
+        />
 </layer-list>

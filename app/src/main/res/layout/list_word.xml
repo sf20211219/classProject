@@ -4,36 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/g2f4f4f">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="90dp">
-
         <Button
             android:id="@+id/backBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="#00FF0000"
             android:drawableBottom="@drawable/size"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            android:layout_marginTop="-10dp"/>
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
             android:text="단어목록"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="34dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="95dp" />
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/korail"/>
+
     </LinearLayout>
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/black" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -51,7 +49,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="닦다"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -62,7 +61,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="넓다"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -73,7 +73,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="굳이"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -84,7 +85,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="국물"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -95,7 +97,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="물질"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -106,7 +109,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="아침밥"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -117,7 +121,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="대통령"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -128,7 +133,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="줄넘기"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -139,7 +145,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="솜이불"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 
@@ -150,7 +157,8 @@
                 android:layout_margin="10dp"
                 android:height="90dp"
                 android:text="닭장"
-                android:textColor="@android:color/white"
+                android:textColor="#003300"
+                android:fontFamily="@font/korail"
                 android:background="@drawable/round"
                 android:textSize="20sp" />
 

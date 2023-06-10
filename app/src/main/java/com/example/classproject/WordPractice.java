@@ -33,11 +33,10 @@ public class WordPractice extends AppCompatActivity {
     private RecordService service;
     private Button backBtn, recordBtn;
     private TextView sttText, wData, tData;
+    private int buttonId;
     private boolean isBind = false;
     //private String
     private ArrayList<String> sttResult = null;
-
-    private int buttonId;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -47,8 +46,8 @@ public class WordPractice extends AppCompatActivity {
 
         checkPermission();
 
-        Intent intent = getIntent(); // Intent 객체를 먼저 가져옴
-        buttonId = intent.getIntExtra("buttonId", 0); // 전달받은 버튼 ID 저장
+        Intent intent = getIntent();
+        buttonId = intent.getIntExtra("buttonId", 0);
 
         backBtn = (Button) findViewById(R.id.backBtn);
         recordBtn = (Button) findViewById(R.id.recordBtn);
@@ -66,7 +65,6 @@ public class WordPractice extends AppCompatActivity {
 
         LocalBroadcastManager.getInstance(this).registerReceiver(resultReceiver, new IntentFilter(RecordService.ACTION_RESULT));
     }
-
 
     @Override
     protected void onStart() {
@@ -98,6 +96,7 @@ public class WordPractice extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
+            String num = getIntent().getStringExtra("num");
             String word = getIntent().getStringExtra("word");
             String detail = getIntent().getStringExtra("detail");
             String voice = getIntent().getStringExtra("voice");
@@ -105,6 +104,7 @@ public class WordPractice extends AppCompatActivity {
                 case R.id.backBtn:
                     Intent backIntent = new Intent(WordPractice.this, WordDetail.class);
                     backIntent.putExtra("buttonId", buttonId);
+                    backIntent.putExtra("num", num);
                     backIntent.putExtra("word", word);
                     backIntent.putExtra("detail", detail);
                     backIntent.putExtra("voice", voice);
@@ -126,7 +126,6 @@ public class WordPractice extends AppCompatActivity {
             service = binder.getService();
             isBind = true;
         }
-
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
             isBind = false;
