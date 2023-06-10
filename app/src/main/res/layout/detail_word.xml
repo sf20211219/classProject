@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/g2f4f4f">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,24 +17,20 @@
             android:layout_height="50dp"
             android:background="#00FF0000"
             android:drawableBottom="@drawable/size"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            android:layout_marginTop="-10dp"/>
 
         <TextView
             android:id="@+id/wordView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
             android:text="단어"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="34dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="120sp" />
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/korail"/>
     </LinearLayout>
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/black" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,21 +41,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/white">
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <VideoView
-                    android:id="@+id/videoView"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"/>
+                android:id="@+id/vv"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/startBtn"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="#00FF0000"
@@ -75,7 +72,8 @@
                 android:text="text"
                 android:textSize="25dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"/>
         </LinearLayout>
     </ScrollView>
 
@@ -85,8 +83,9 @@
         android:layout_height="80dp"
         android:text="연습하기"
         android:layout_gravity="center"
-        android:textColor="@android:color/white"
+        android:textColor="#003300"
         android:textSize="24sp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/round"/>
+        android:background="@drawable/round"
+        android:fontFamily="@font/korail"/>
 </LinearLayout>

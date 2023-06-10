@@ -75,19 +75,19 @@ public class WordListActivity extends AppCompatActivity {
                     runOnUiThread(() -> {
                         try {
                             JSONObject jsonObject = new JSONObject(responseData);
+                            String num = jsonObject.getString("num");
                             String word = jsonObject.getString("word");
                             String voice = jsonObject.getString("voice");
                             String detail = jsonObject.getString("detail");
-                            //String pronunciation_url = jsonObject.getString("pronunciation_url");
 
                             Intent intent = new Intent(WordListActivity.this, WordDetail.class);
+                            intent.putExtra("num", num);
                             intent.putExtra("buttonId", buttonId);
                             intent.putExtra("word", word);
                             intent.putExtra("detail", detail);
                             intent.putExtra("voice", voice);
-                            //intent.putExtra("pronunciation_url", pronunciation_url);
                             startActivity(intent);
-                            //Log.d(TAG, pronunciation_url);
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
