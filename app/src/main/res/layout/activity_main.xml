@@ -11,7 +11,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:background="@drawable/g2f4f4f"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -19,35 +18,41 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="사용자님 환영합니다."
-            android:textColor="@color/white"
-            android:textSize="35sp"
+            android:text="반갑습니다"
+            android:textColor="#000000"
+            android:textSize="30sp"
             android:layout_gravity="center"
-            android:fontFamily="@font/korail"/>
+            android:fontFamily="@font/korail"
+            android:layout_marginTop="15dp"/>
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#adadad"/>
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="300dp"
-        android:layout_height="110dp"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
         android:text="연습하기"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/gray_btn"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/b284d63"
         android:fontFamily="@font/korail"/>
 
     <Button
         android:id="@+id/btn2"
-        android:layout_width="300dp"
-        android:layout_height="110dp"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
         android:text="교정하기"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/gray_btn"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/b284d63"
         android:fontFamily="@font/korail"/>
 
 </LinearLayout>

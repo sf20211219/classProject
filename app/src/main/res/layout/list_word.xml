@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/g2f4f4f">
+    android:background="@drawable/b284d63">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,9 +15,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="#00FF0000"
-            android:drawableBottom="@drawable/size"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:layout_marginTop="-10dp"/>
+            android:drawableBottom="@drawable/back_btn_size"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
         <TextView
             android:id="@+id/textView14"

@@ -4,26 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
-    <Button
-        android:id="@+id/backBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:background="#00FF0000"
-        android:drawableBottom="@drawable/size"
-        tools:ignore="SpeakableTextPresentCheck"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
 
-    <TextView
-        android:id="@+id/wordView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="단어"
-        android:textSize="33sp"
-        android:textColor="@android:color/black" />
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="53dp"
+            android:layout_height="57dp"
+            android:background="#00FF0000"
+            android:drawableBottom="@drawable/back_btn_size"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:layout_marginTop="-10dp"/>
+
+        <TextView
+            android:id="@+id/wordView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:text="단어"
+            android:textColor="@color/black"
+            android:textSize="34dp"
+            android:fontFamily="@font/korail"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#adadad"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,7 +50,8 @@
             android:text="표준 발음: "
             android:layout_marginLeft="110dp"
             android:textSize="22sp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/korail"/>
 
         <TextView
             android:id="@+id/voiceTextView"
@@ -47,7 +60,8 @@
             android:text="텍스트"
             android:layout_marginLeft="10sp"
             android:textSize="22sp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/korail"/>
 
         </LinearLayout>
 
@@ -65,7 +79,8 @@
             android:layout_marginTop="10dp"
             android:text="정확도:"
             android:textSize="20sp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/korail"/>
 
         <TextView
             android:id="@+id/textView6"
@@ -75,7 +90,8 @@
             android:textSize="20sp"
             android:layout_marginTop="9dp"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/korail"/>
 
     </LinearLayout>
 
@@ -87,17 +103,18 @@
         android:text="인식 중..."
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:fontFamily="@font/korail"/>
 
     <Button
         android:id="@+id/recordBtn"
         android:layout_width="150dp"
         android:layout_height="160dp"
-        android:text="Button"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="#00FF0000"
-        android:drawableBottom="@drawable/unnamedsize"/>
+        android:drawableBottom="@drawable/unnamedsize"
+        tools:ignore="SpeakableTextPresentCheck"/>
 
 
 
