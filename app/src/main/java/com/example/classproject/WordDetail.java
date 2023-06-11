@@ -36,8 +36,11 @@ public class WordDetail extends AppCompatActivity {
         vv.setVideoURI(uri);
         vv.requestFocus();
 
+        String detailText = getIntent().getStringExtra("detail");
+        String formattedJsonText = detailText.replace("\\n", "\n");
+
         wData.setText(getIntent().getStringExtra("word"));
-        tvData.setText(getIntent().getStringExtra("detail"));
+        tvData.setText(formattedJsonText);
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override

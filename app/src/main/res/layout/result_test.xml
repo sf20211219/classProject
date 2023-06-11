@@ -5,20 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp">
-
-        <Button
-            android:id="@+id/backBtn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="#00FF0000"
-            android:drawableBottom="@drawable/size"
-            tools:ignore="SpeakableTextPresentCheck"/>
+        android:layout_height="90dp"
+        android:paddingTop="10dp">
 
         <TextView
             android:id="@+id/textView14"
@@ -28,15 +22,34 @@
             android:textColor="#000000"
             android:textSize="34dp"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="70dp"/>
+            android:layout_marginStart="90dp"
+            android:fontFamily="@font/korail"/>
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="나가기"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:text="95% 이상 정확도만 정답으로 인정"
+        android:text="90% 이상 정확도만 정답으로 인정"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/korail"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,7 +61,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="결과 :"
-            android:textColor="#000000"
+            android:textColor="@color/black"
+            android:fontFamily="@font/korail"
             android:textSize="24dp"
             android:layout_marginLeft="10dp"/>
 
@@ -57,14 +71,18 @@
             android:layout_height="wrap_content"
             android:text="00"
             android:textSize="30dp"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/korail"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/ 10"
             android:textSize="30dp"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/korail"/>
 
     </LinearLayout>
 
@@ -72,38 +90,34 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/textView24"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:fontFamily="@font/korail"
             android:text="단어"
-            android:textColor="#000000"
-            android:textSize="30dp"
-            android:layout_marginLeft="40dp"/>
+            android:textColor="@color/black"
+            android:textSize="30dp" />
 
         <TextView
-            android:id="@+id/textView25"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:text="표준 발음"
-            android:textColor="#000000"
-            android:textSize="30dp"
-            android:layout_marginLeft="45dp"/>
-        <TextView
             android:id="@+id/textView26"
-            android:layout_width="90dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="정확도"
-            android:layout_gravity="right"
-            android:textColor="#000000"
+            android:textColor="@color/black"
+            android:fontFamily="@font/korail"
             android:textSize="30dp"
-            android:layout_marginLeft="35dp"/>
+            android:layout_marginLeft="90dp"/>
 
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="400dp">
+        android:layout_height="400dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,26 +126,33 @@
 
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
                 <TableRow
-                    android:layout_width="match_parent"
+                    android:layout_width="377dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_width="20dp"
+                        android:id="@+id/num1"
+                        android:layout_width="30dp"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/korail"
                         android:text="1"
-                        android:textSize="30dp" />
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
 
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
@@ -140,24 +161,12 @@
                     </HorizontalScrollView>
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="110dp"
+                        android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result1"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -170,37 +179,30 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
-                        android:layout_width="20dp"
+                        android:id="@+id/num2"
+                        android:layout_width="49dp"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/korail"
                         android:text="2"
-                        android:textSize="30dp" />
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
 
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -211,6 +213,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result2"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -223,37 +226,29 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/num3"
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
                         android:text="3"
-                        android:textSize="30dp" />
-
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/korail"/>
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -264,6 +259,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result3"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -276,37 +272,30 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
-                        android:layout_width="20dp"
+                        android:id="@+id/num4"
+                        android:layout_width="29dp"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/korail"
                         android:text="4"
-                        android:textSize="30dp" />
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
 
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -317,6 +306,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result4"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -329,37 +319,30 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/num5"
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
                         android:text="5"
-                        android:textSize="30dp" />
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/korail"/>
 
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -370,6 +353,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result5"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -382,37 +366,30 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/num6"
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
                         android:text="6"
-                        android:textSize="30dp" />
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/korail"/>
 
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -423,6 +400,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result6"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -435,37 +413,30 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/num7"
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
                         android:text="7"
-                        android:textSize="30dp" />
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/korail"/>
 
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView7"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -476,6 +447,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result7"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -488,37 +460,30 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/num8"
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
                         android:text="8"
-                        android:textSize="30dp" />
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/korail"/>
 
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -529,6 +494,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result8"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -541,37 +507,30 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/num9"
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
                         android:text="9"
-                        android:textSize="30dp" />
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/korail"/>
 
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView9"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -582,6 +541,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result9"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
@@ -594,36 +554,29 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/num10"
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
                         android:text="10"
-                        android:textSize="30dp" />
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/korail"/>
 
                     <HorizontalScrollView
-                        android:layout_width="140dp"
+                        android:layout_width="200dp"
                         android:layout_height="45dp"
-                        android:background="#CCCCCC">
+                        android:background="#CCCCCC"
+                        android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/textView10"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="감자 "
-                            android:textSize="30dp" />
-
-                    </HorizontalScrollView>
-
-                    <HorizontalScrollView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:background="#9C9C9C">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="rkawkdmlTkr"
                             android:textSize="30dp" />
 
                     </HorizontalScrollView>
@@ -634,6 +587,7 @@
                         android:background="#7E7E7E">
 
                         <TextView
+                            android:id="@+id/result10"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="50%"
