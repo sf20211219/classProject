@@ -51,7 +51,7 @@ public class TestResult extends AppCompatActivity {
         if (words != null) {
             for (int i = 0; i < words.length; i++) {
                 String word = words[i];
-                String apiUrl = "http://192.168.64.2:3000/btn" + word;
+                String apiUrl = "http://192.168.64.2:8080/btn" + word;
                 sendRequestToServer(apiUrl, i);
             }
         }

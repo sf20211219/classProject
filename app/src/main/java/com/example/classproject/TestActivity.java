@@ -69,7 +69,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.testBtn:
                 String voiceResult = "음성인식 결과";  // 음성인식 결과를 가져옴
-                String url = "http://192.168.64.2:3000/voice-result";
+                String url = "http://192.168.64.2:8080/voice-result";
                 sendRequestToServer(url, voiceResult);
                 break;
             case R.id.testEnd:
@@ -108,7 +108,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         number.setText(countStr);
 
         int index = count - 1;
-        String url = "http://192.168.64.2:3000/btn" + shuffledList.get(index);
+        String url = "http://192.168.64.2:8080/btn" + shuffledList.get(index);
         sendRequestToServer(url, null);
     }
 
