@@ -31,7 +31,7 @@ public class WordDetail extends AppCompatActivity {
         vv = findViewById(R.id.vv);
 
         String num = getIntent().getStringExtra("num");
-        String serverUrl = "http://192.168.64.2:3000/video/" + num + ".mp4";
+        String serverUrl = "http://192.168.64.2:8080/video/" + num + ".mp4";
         Uri uri = Uri.parse(serverUrl);
         vv.setVideoURI(uri);
         vv.requestFocus();
