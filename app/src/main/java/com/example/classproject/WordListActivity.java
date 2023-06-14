@@ -49,7 +49,7 @@ public class WordListActivity extends AppCompatActivity {
             int buttonId = v.getId();
             int index = Arrays.asList(btnId).indexOf(buttonId);
             if (index != -1) {
-                String url = "http://192.168.64.2:8080/btn" + (index + 1);
+                String url = "http://서버주소/btn" + (index + 1);
                 String name = wordBtn[index].getText().toString();
                 handleButtonClick(url, name, buttonId);
             } else if (buttonId == R.id.backBtn) {
